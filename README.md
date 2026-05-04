@@ -1,48 +1,130 @@
-# Projecte de Gestió Bancària
+# Aplicació de Gestió Bancària
 
-Aquest projecte correspon a una pràctica de Disseny Orientat a Objectes aplicada a una aplicació de gestió bancària.
+## Descripció del projecte
 
-## Objectiu
+Aquest projecte consisteix en el disseny i implementació d’una aplicació de gestió bancària utilitzant el paradigma de Programació Orientada a Objectes (POO).
 
-L’objectiu és analitzar un enunciat textual, identificar les classes principals, definir les seues relacions i implementar l’esquelet de l’aplicació en Java.
+L’objectiu principal és modelar el sistema bancari mitjançant un diagrama de classes, implementar l’esquelet en Java i documentar-lo amb JavaDoc, així com representar el comportament del sistema amb diferents diagrames UML.
 
-## Contingut del projecte
+---
 
-- `src/`: conté les classes Java de l’aplicació.
-- `diagrames/`: conté el diagrama de classes i els diagrames de comportament.
-- `documentacio/`: conté la documentació generada amb JavaDoc.
+## Estructura del projecte
 
-## Classes principals
+El projecte està organitzat en les següents carpetes:
 
-Les classes principals del projecte són:
+* **src/**
+  Conté totes les classes Java del sistema (esquelet amb atributs, mètodes i relacions).
 
-- Persona
-- Client
-- Empleat
-- Sucursal
-- Banc
-- CompteBancari
-- CompteCorrent
-- CompteTermini
-- TargetaCredit
-- FonsInversio
-- CarteraValors
-- Valor
+* **diagrames/**
+  Inclou els diagrames UML requerits:
 
-## Diagrames realitzats
+  * Diagrama de classes
+  * Diagrama de casos d’ús
+  * Diagrama de seqüència
+  * Diagrama de comunicació
+  * Diagrama d’activitat
 
-S’han realitzat els següents diagrames:
+* **documentacio/**
+  Conté la documentació generada amb JavaDoc en format HTML.
 
-- Diagrama de classes
-- Diagrama de casos d’ús
-- Diagrama de seqüència
-- Diagrama de comunicació
-- Diagrama d’activitat
+* **README.md**
+  Document explicatiu del projecte.
 
-## Documentació
+---
 
-La documentació del codi s’ha generat amb JavaDoc i es troba dins la carpeta `documentacio`.
+## Funcionalitats modelades
+
+El sistema permet gestionar:
+
+* Clients i empleats
+* Sucursals bancàries
+* Comptes bancaris:
+
+  * Comptes corrents
+  * Comptes a termini
+* Productes associats:
+
+  * Targetes de crèdit
+  * Fons d’inversió
+  * Carteres de valors
+
+---
+
+## Disseny orientat a objectes
+
+S’ha aplicat el disseny orientat a objectes mitjançant:
+
+* Identificació de classes a partir de l’anàlisi gramatical
+* Definició d’atributs i mètodes
+* Relacions entre classes:
+
+  * Herència (Persona → Client / Empleat)
+  * Associació (Client → Comptes)
+  * Agregació i composició segons el tipus de relació
+* Definició de cardinalitats
+
+---
+
+## Implementació
+
+Les classes estan implementades en Java com a esquelet (sense lògica interna), incloent:
+
+* Declaració d’atributs
+* Constructors
+* Mètodes amb paràmetres
+* Relacions entre classes mitjançant referències i col·leccions
+
+---
+
+## Documentació JavaDoc
+
+El projecte està documentat amb JavaDoc, incloent:
+
+* Descripció de classes
+* Documentació de mètodes
+* Paràmetres d’entrada i sortida
+
+### Generar JavaDoc
+
+Per generar la documentació:
+
+```bash
+javadoc -d documentacio src/*.java
+```
+
+Després obrir:
+
+```bash
+documentacio/index.html
+```
+
+---
+
+## Compilació del projecte
+
+Per compilar totes les classes:
+
+```bash
+javac src/*.java
+```
+
+---
+
+## Eines utilitzades
+
+* Java
+* Visual Studio Code
+* draw.io (diagrames UML)
+* GitHub (control de versions)
+
+---
 
 ## Autor
 
-Nom de l’alumne/a: Isaac Martinez Sanchez
+Projecte realitzat per: Isaac Martinez Sanchez
+
+---
+
+## Notes finals
+
+Aquest projecte és una simulació acadèmica centrada en el disseny i modelatge del sistema, per tant no inclou la implementació completa de la lògica de negoci.
